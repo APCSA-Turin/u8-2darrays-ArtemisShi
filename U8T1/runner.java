@@ -1,109 +1,47 @@
+import java.util.Arrays;
+
 public class runner {
 public static void main(String[] args) {
-// TEST CODE FOR swapFrontAndBackRows
-System.out.println("-------TEST 1-------");
-String[][] w1 = {
-        {"hi", "bye", "stuff", "go"},
-        {"time", "up", "you", "good"},
-        {"map", "low", "bow", "mom"}
+// TEST CODE FOR invert
+System.out.println("---invert test1---");
+int[][] test1 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+int[][] ts1 = FunWith2DArrays.invert(test1);
+for (int[] row : ts1) {
+    for (int num : row) {
+        System.out.print(num + " ");
+    }
+    System.out.println();
+}
+System.out.println("orig array not modified:");
+for (int[] row : test1) {
+    for (int num : row) {
+        System.out.print(num + " ");
+    }
+    System.out.println();
+}
+System.out.println("\n---invert test2---");
+int[][] test2 = {
+        {1, 2, 3, 4, 5, 6},
+        {7, 8, 9, 10, 11, 12},
+        {13, 14, 15, 16, 17, 18},
+        {19, 20, 21, 22, 23, 24}
 };
-System.out.println("--Original:");
-for (String[] row : w1) {
-    for (String element : row) {
-        System.out.print(element + " ");
+int[][] ts2 = FunWith2DArrays.invert(test2);
+for (int[] row : ts2) {
+    for (int num : row) {
+        System.out.print(num + " ");
     }
     System.out.println();
 }
-System.out.println("--Modified:");
-FunWith2DArrays.swapFrontAndBackRows(w1);
-for (String[] row : w1) {
-    for (String element : row) {
-        System.out.print(element + " ");
+System.out.println("\n---invert test3---");
+int[][] test3 = {{10}};
+int[][] ts3 = FunWith2DArrays.invert(test3);
+for (int[] row : ts3) {
+    for (int num : row) {
+        System.out.print(num + " ");
     }
     System.out.println();
 }
-System.out.println("-------TEST 2-------");
-String[][] w2 = {
-        {"time", "up", "bye"},
-        {"hi", "hit", "up"},
-        {"map", "bam", "low"},
-        {"bow", "mom", "joy"}
-};
-System.out.println("--Original:");
-for (String[] row : w2) {
-    for (String element : row) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-}
-System.out.println("--Modified:");
-FunWith2DArrays.swapFrontAndBackRows(w2);
-for (String[] row : w2) {
-    for (String element : row) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-}
-
-System.out.println("-------TEST 3-------");
-String[][] w3 = {{"phone", "mouse", "keyboard"}};
-System.out.println("--Original:");
-for (String[] row : w3) {
-    for (String element : row) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-}
-System.out.println("--Modified:");
-FunWith2DArrays.swapFrontAndBackRows(w3);
-for (String[] row : w3) {
-    for (String element : row) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-}
-
-System.out.println("-------TEST 4-------");
-String[][] w4 = {
-        {"cat"},
-        {"dog"},
-        {"hamster"},
-        {"bird"}
-};
-System.out.println("--Original:");
-for (String[] row : w4) {
-    for (String element : row) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-}
-System.out.println("--Modified:");
-FunWith2DArrays.swapFrontAndBackRows(w4);
-for (String[] row : w4) {
-    for (String element : row) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-}
-
-System.out.println("-------TEST 5-------");
-String[][] w5 = {{"time"}};
-System.out.println("--Original:");
-for (String[] row : w5) {
-    for (String element : row) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-}
-System.out.println("--Modified:");
-FunWith2DArrays.swapFrontAndBackRows(w5);
-for (String[] row : w5) {
-    for (String element : row) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-}
-
 
 }
 }
